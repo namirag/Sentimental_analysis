@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<form action="/login_page" method="post">
+    <div class="container text-center p-1">
+        <h2 class="font-weight-bold text-primary bg-dark"><u>Login</u></h2>
+    </div>
+    <div class="container mx-auto" style="width: 300px;">
+        <div class="input-group">
+            <div class="input-group-prepend p-1">
+                <span class="input-group-text rounded mr-1">email</span>
+                <input type="text" aria-label="email" name="email" class="form-control" placeholder="xyz@gmail.com">
+            </div>
+            <span class="border border-white border-2 rounded mr-1">password has to be more than 7 letters <br>
+                must contain at least one capital letter, one character, and one number</span>
+            <div class="input-group-prepend p-1">
+                <span class="input-group-text rounded mr-1">password</span>
+                <input type="password" aria-label="password" name="password" class="form-control" placeholder="Xyz!123">
+            </div>
+        </div>
+        <div class="container p-1">
+            <div class="text-center">
+                <input class="btn btn-outline-primary text-dark font-weight-bold" type="submit" value="Login" style="text-decoration:none;">
+            </div>
+        </div>
+        <div id="emailHelp" class="form-text text-center">All information is secure.</div>
+        <div class="text-center">
+            <a href="forgot_password">Forgot password?</a>
+            <a href="sign_up">Register yourself</a>
+        </div>
+        <div class="text-center text-danger">
+            {{error_msg}}
+        </div>
+    </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</body>
+</html>
